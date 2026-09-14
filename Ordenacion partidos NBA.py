@@ -1,3 +1,9 @@
+
+
+
+
+
+
 #Comenzamos con el bubble sort
 
 def bubble_sort(array, key):
