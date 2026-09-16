@@ -34,18 +34,18 @@ for g in sample:
 sorted_partidos = bubble_sort(sample.copy(), "TOTAL_POINTS")
 
 
-print("10 PARTIDOS CON MÁS PUNTOS")
+print("\nTOP 10 PARTIDOS CON MÁS PUNTOS")
+print("=" * 75)
 
 for i in sorted_partidos[:10]:
 
     print(
-        f"{i['GAME_DATE_EST']}: "
-        f"{i['TEAM_ID_home']} {i['PTS_home']} - "
-        f"{i['TEAM_ID_away']} {i['PTS_away']} "
-        f"(Total Points: {i['TOTAL_POINTS']})"
+        f"Fecha: {i['GAME_DATE_EST']}  |  "
+        f"Local ID: {i['TEAM_ID_home']}  "
+        f"{int(i['PTS_home'])} - {int(i['PTS_away'])}  "
+        f"Visitante ID: {i['TEAM_ID_away']}  |  "
+        f"Total: {int(i['TOTAL_POINTS'])}"
     )
-
-
 # Calcular diferencia de puntos
 
 for g in sample:
@@ -64,12 +64,14 @@ palizas = sorted(
 
 
 print("\n10 MAYORES PALIZAS")
+print("=" * 75)
 
 for i in palizas[:10]:
 
     print(
-        f"{i['GAME_DATE_EST']}: "
-        f"{i['TEAM_ID_home']} {i['PTS_home']} - "
-        f"{i['TEAM_ID_away']} {i['PTS_away']} "
-        f"(Diferencia: {i['POINT_DIFFERENCE']} puntos)"
+        f"Fecha: {i['GAME_DATE_EST']}  |  "
+        f"Local ID: {i['TEAM_ID_home']}  "
+        f"{int(i['PTS_home'])} - {int(i['PTS_away'])}  "
+        f"Visitante ID: {i['TEAM_ID_away']}  |  "
+        f"Diferencia: {int(i['POINT_DIFFERENCE'])}"
     )
